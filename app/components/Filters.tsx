@@ -1,5 +1,12 @@
 "use client";
-import { Box, Chip, Grid2 } from "@mui/material";
+import {
+  Box,
+  Chip,
+  FormControl,
+  Grid2,
+  MenuItem,
+  Select
+} from "@mui/material";
 import { useState } from "react";
 
 interface Props {
@@ -8,27 +15,52 @@ interface Props {
 }
 
 const Filters = ({ title, options }: Props) => {
-  const [selectedFilter, setSelectedFilter] = useState<number | null>(null);
+  const [selectedFilter, setSelectedFilter] = useState<number>(0);
 
   const handleClick = (index: number) => {
-    console.log("clicked", index);
+    console.log(index);
     setSelectedFilter(index);
   };
 
   return (
-    <Box display="flex" flexDirection="column" alignItems="center" marginBottom={5}>
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      marginBottom={5}
+      width="100%"
+    >
       <p className="mb-2 md:mb-4">{title}</p>
-      <Grid2 container spacing={1} alignItems="center">
-        {options.map((option, index) => (
-          <Chip
-            variant="outlined"
-            className={index === selectedFilter ? "selected" : ""}
-            key={index}
-            label={option}
-            onClick={() => handleClick(index)}
-          ></Chip>
-        ))}
-      </Grid2>
+      <FormControl dir="rtl" fullWidth sx={{ display: { md: "none" } }}>
+        <Select
+          dir="rtl"
+          value={selectedFilter}
+          onChange={({ target }) =>
+            handleClick(parseInt(target.value.toString()))
+          }
+          inputProps={{ "aria-label": "Without label" }}
+        >
+          {options.map((option, index) => (
+            <MenuItem key={index} value={index}>
+              {option}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
+
+      <FormControl sx={{ display: { xs: "none", md: "block" } }}>
+        <Grid2 container spacing={1} alignItems="center">
+          {options.map((option, index) => (
+            <Chip
+              variant="outlined"
+              className={index === selectedFilter ? "selected" : ""}
+              key={index}
+              label={option}
+              onClick={() => handleClick(index)}
+            ></Chip>
+          ))}
+        </Grid2>
+      </FormControl>
     </Box>
   );
 };

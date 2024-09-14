@@ -10,6 +10,7 @@ const yekan = localFont({
 });
 
 const theme = createTheme({
+  direction: "rtl",
   palette: {
     // mode: "light",
     primary: {
@@ -38,7 +39,7 @@ const theme = createTheme({
                 borderRadius: "30px",
                 color: " var(--foreground)",
                 fontSize: "18px",
-                fontWeight:"400",
+                fontWeight: "400",
               },
             },
             {
@@ -53,6 +54,13 @@ const theme = createTheme({
         },
         label: {
           padding: "12px 24px",
+        },
+      },
+    },
+    MuiSelect: {
+      styleOverrides: {
+        root: {
+          borderRadius: "16px",
         },
       },
     },
