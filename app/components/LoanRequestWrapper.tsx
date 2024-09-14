@@ -40,19 +40,21 @@ const LoanRequestWrapper = () => {
   };
 
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box>
       <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Tabs
           value={value}
           onChange={handleChange}
-          aria-label="basic tabs example"
+          aria-label="tabs"
+          centered
+          textColor="secondary"
         >
           {tabs.map((tab) => (
             <Tab key={tab.index} label={tab.label} {...a11yProps(tab.index)} />
           ))}
         </Tabs>
       </Box>
-      
+
       {tabs.map((tab) => (
         <LoanRequestTabPanel key={tab.index} value={value} index={tab.index}>
           {tab.children}
