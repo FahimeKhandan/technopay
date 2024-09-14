@@ -17,7 +17,6 @@ const Filters = ({ title, options }: Props) => {
         {options.map((option, index) => (
           <Chip
             variant="outlined"
-            
             key={index}
             label={option}
             onClick={handleClick}

@@ -47,8 +47,8 @@ const LoanRequestWrapper = () => {
           onChange={handleChange}
           aria-label="tabs"
           centered
-          textColor="secondary"
-          indicatorColor="secondary"
+          // textColor="secondary"
+          // indicatorColor="secondary"
         >
           {tabs.map((tab) => (
             <Tab key={tab.index} label={tab.label} {...otherProps(tab.index)} />
