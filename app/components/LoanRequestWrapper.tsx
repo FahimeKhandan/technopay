@@ -12,7 +12,7 @@ interface Tabs {
   children: ReactNode;
 }
 
-const a11yProps = (index: number) => {
+const otherProps = (index: number) => {
   return {
     id: `simple-tab-${index}`,
     "aria-controls": `simple-tabpanel-${index}`,
@@ -48,9 +48,10 @@ const LoanRequestWrapper = () => {
           aria-label="tabs"
           centered
           textColor="secondary"
+          indicatorColor="secondary"
         >
           {tabs.map((tab) => (
-            <Tab key={tab.index} label={tab.label} {...a11yProps(tab.index)} />
+            <Tab key={tab.index} label={tab.label} {...otherProps(tab.index)} />
           ))}
         </Tabs>
       </Box>
