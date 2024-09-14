@@ -1,4 +1,6 @@
+"use client";
 import { Box, Chip, Grid2 } from "@mui/material";
+import { useState } from "react";
 
 interface Props {
   title: string;
@@ -6,8 +8,11 @@ interface Props {
 }
 
 const Filters = ({ title, options }: Props) => {
-  const handleClick = () => {
-    console.log("clicked");
+  const [selectedFilter, setSelectedFilter] = useState<number | null>(null);
+
+  const handleClick = (index: number) => {
+    console.log("clicked", index);
+    setSelectedFilter(index);
   };
 
   return (
@@ -17,9 +22,10 @@ const Filters = ({ title, options }: Props) => {
         {options.map((option, index) => (
           <Chip
             variant="outlined"
+            className={index === selectedFilter ? "selected" : ""}
             key={index}
             label={option}
-            onClick={handleClick}
+            onClick={() => handleClick(index)}
           ></Chip>
         ))}
       </Grid2>
