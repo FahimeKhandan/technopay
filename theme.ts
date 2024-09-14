@@ -38,7 +38,7 @@ const theme = createTheme({
                 borderRadius: "30px",
                 color: " var(--foreground)",
                 fontSize: "18px",
-                fontWeight:"400"
+                fontWeight:"400",
               },
             },
             {

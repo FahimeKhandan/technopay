@@ -16,7 +16,7 @@ const Filters = ({ title, options }: Props) => {
   };
 
   return (
-    <Box display="flex" flexDirection="column" alignItems="center">
+    <Box display="flex" flexDirection="column" alignItems="center" marginBottom={5}>
       <p className="mb-2 md:mb-4">{title}</p>
       <Grid2 container spacing={1} alignItems="center">
         {options.map((option, index) => (
