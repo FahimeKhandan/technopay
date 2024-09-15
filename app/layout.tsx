@@ -2,6 +2,8 @@ import theme from "@/theme";
 import { ThemeProvider } from "@mui/material/styles";
 import type { Metadata } from "next";
 import "./globals.css";
+import QueryClientProvider from "./QueryClientProvider";
+
 
 export const metadata: Metadata = {
   title: "technopay",
@@ -16,7 +18,9 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body>
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        <QueryClientProvider>
+          <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        </QueryClientProvider>
       </body>
     </html>
   );
