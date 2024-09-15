@@ -6,7 +6,7 @@
 
 @layer base {
   *{
-    @apply font-yekan-bakh
+    @apply font-yekan-faNum-regular
   }
 }
 
@@ -18,13 +18,16 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-weight: 400;
-  /* font-family: "yekan-faNum-regular"; */
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-weight: 700;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+p{
+  font-weight: 200;
 }
-

@@ -1,4 +1,4 @@
-import LoanRequestWrapper from "./components/LoanRequestWrapper";
+import LoanRequestWrapper from "./_components/LoanRequestWrapper";
 
 export default function Home() {
   return (

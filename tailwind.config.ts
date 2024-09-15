@@ -8,12 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-    fontFamily:{
-      'yekan-bakh':['yekan-bakh']
-    },
+      fontFamily: {
+        "yekan-faNum-regular": ["yekan-faNum-regular"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        "dark-info": "#20526A",
+        info: "#1E98BC",
+        "middle-text": "#4D637B",
       },
     },
   },
