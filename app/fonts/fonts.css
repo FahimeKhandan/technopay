@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "yekan-faNum-regular";
+    src: url("YekanBakhFaNum-Regular.ttf");
+}
+
+@font-face {
+    font-family: "yekan-faNum-bold";
+    src: url("YekanBakhFaNum-Bold.ttf");
+}
+
+@font-face {
+    font-family: "yekan-bakh";
+    src: url("YekanBakh-VF.ttf");
+}

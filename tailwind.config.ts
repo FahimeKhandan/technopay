@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+    fontFamily:{
+      'yekan-bakh':['yekan-bakh']
+    },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

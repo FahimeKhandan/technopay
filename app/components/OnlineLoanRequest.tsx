@@ -1,4 +1,5 @@
 import Filters from "./Filters";
+import PackageCard from "./PackageCard";
 
 const OnlineLoanRequest = () => {
   return (
@@ -19,6 +20,7 @@ const OnlineLoanRequest = () => {
         title="مدت زمان بازپرداخت::"
         options={["۶ ماهه", "۱۲ ماهه", "۱۸ ماهه"]}
       />
+      <PackageCard/>
     </>
   );
 };

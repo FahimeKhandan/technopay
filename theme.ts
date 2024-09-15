@@ -1,13 +1,6 @@
 "use client";
-import localFont from "next/font/local";
 
 import { createTheme } from "@mui/material/styles";
-
-const yekan = localFont({
-  src: "./app/fonts/YekanBakh-Regular.woff",
-  variable: "--font-yekan",
-  // weight: "100 400",
-});
 
 const theme = createTheme({
   direction: "rtl",
@@ -16,9 +9,11 @@ const theme = createTheme({
     primary: {
       main: "#1F2833",
     },
+    secondary: {
+      main: "#5AEDA6",
+    },
   },
   typography: {
-    fontFamily: yekan.style.fontFamily,
     h4: {
       fontSize: "24px",
       "@media (min-width:900px)": {
