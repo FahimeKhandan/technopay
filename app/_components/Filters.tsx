@@ -49,7 +49,12 @@ const Filters = ({ title, options }: Props) => {
       </FormControl>
 
       <FormControl sx={{ display: { xs: "none", md: "block" } }}>
-        <Grid2 container spacing={1} alignItems="center">
+        <Grid2
+          container
+          spacing={1}
+          alignItems="center"
+          justifyContent="center"
+        >
           {options.map((option, index) => (
             <Chip
               variant="outlined"
