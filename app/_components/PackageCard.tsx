@@ -89,7 +89,7 @@ const SupplierRow = ({
       alignItems="center"
       justifyContent="center"
     >
-      <p className="text-middle-text text-center">
+      <p className="text-middle-text text-center font-extralight">
         حق اشتراک برای عضویت در طرح زمین و دریافت وام ۵۰ میلیون تومانی:
       </p>
       <p className="text-foreground font-bold"> {prepayment_amount} تومان</p>
@@ -98,7 +98,7 @@ const SupplierRow = ({
 
   return (
     <>
-      <Box display="flex">
+      <Box display="flex" alignItems="center">
         <Image
           src={blueBank}
           width={32}
@@ -109,12 +109,12 @@ const SupplierRow = ({
         />
         <p className="text-xl font-bold">{supplierName}</p>
       </Box>
-      <p className="text-dark-info font-medium">
-        طرح زمین{" "}
+      <Box display="flex" alignItems="center">
+        <p className="text-dark-info font-medium ml-2">طرح زمین </p>
         <LightTooltip title={tooltipTitle} arrow>
           <InfoOutlinedIcon color="info" fontSize="small" />
         </LightTooltip>
-      </p>
+      </Box>
     </>
   );
 };
