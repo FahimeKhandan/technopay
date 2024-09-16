@@ -41,7 +41,7 @@ const OnlineLoanRequest = () => {
           title="مبلغ مورد نظر:"
           options={
             data?.credit_amounts.map((i) => ({
-              label: formatCurency(i).replace("ریال", "تومان"),
+              label: `${formatCurency(i).replace("ریال", "")} تومان`,
               amount: i,
             })) || []
           }
