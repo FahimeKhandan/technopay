@@ -33,7 +33,7 @@ const OnlineLoanRequest = () => {
 
   return (
     <>
-      <h4 className="my-10 text-2xl md:text-3xl">ماشین محاسبه‌گر اقساط</h4>
+      <h4 className="my-10 text-2xl md:text-3xl font-[900]">ماشین محاسبه‌گر اقساط</h4>
       {data?.credit_amounts.length && (
         <Filters
           title="مبلغ مورد نظر:"

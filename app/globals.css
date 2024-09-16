@@ -15,13 +15,16 @@
   --foreground: #1F2833;
   --darkInfo: #20526A;
   --info: #1E98BC;
-      --middleText: #4D637B;
+  --middleText: #4D637B;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
+  letter-spacing: -.2px;
+  word-spacing: -1px;
 }
+
 h1,
 h2,
 h3,
