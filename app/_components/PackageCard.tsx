@@ -23,9 +23,9 @@ const PackageCard = ({ packageInfo, supplierName }: Props) => {
     <Card
       variant="outlined"
       sx={{ width: { md: 447 } }}
-      className="flex flex-col items-center px-4 py-8 rounded-2xl border-black border-opacity-20"
+      className="flex flex-col items-center px-4 py-6 rounded-2xl border-black border-opacity-20"
     >
-      <Grid2 container rowSpacing={2} className="p-0 mb-8">
+      <Grid2 container rowSpacing={2} className="p-0 mb-6">
         <PackageRows>
           <SupplierRow
             supplierName={supplierName}

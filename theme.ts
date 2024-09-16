@@ -5,7 +5,6 @@ import { createTheme } from "@mui/material/styles";
 const theme = createTheme({
   direction: "rtl",
   palette: {
-    // mode: "light",
     primary: {
       main: "#1F2833",
     },
@@ -56,6 +55,19 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           borderRadius: "16px",
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: "16px",
+          padding: "14px 40px",
+          fontFamily: "yekan-faNum-regular",
+          fontSize: "18px",
+          fontWeight: 700,
+          lineHeight: "28px",
+          boxShadow: "none",
         },
       },
     },
