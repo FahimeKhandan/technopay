@@ -4,9 +4,9 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import { Box, Card, Grid2 } from "@mui/material";
 import Image from "next/image";
 import { ReactNode } from "react";
-import { Package } from "./OnlineLoanRequest";
-import PackageCardActions from "./PackageCardActions";
 import LightTooltip from "./LightTooltip";
+import PackageCardActions from "./PackageCardActions";
+import { Package } from "../../hooks/usePackeges";
 
 interface PackageRowProps {
   hasBorder?: boolean;
