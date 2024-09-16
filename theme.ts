@@ -29,20 +29,12 @@ const theme = createTheme({
             {
               props: { variant: "outlined" },
               style: {
-                borderColor: "#4D637B",
+                borderColor: "var(--foreground)",
                 height: "fit-content",
                 borderRadius: "30px",
                 color: "var(--foreground)",
                 fontSize: "18px",
                 fontWeight: "400",
-              },
-            },
-            {
-              props: { className: "selected" },
-              style: {
-                borderColor: "#1F2833",
-                borderWidth: "3px",
-                fontWeight: "700",
               },
             },
           ],

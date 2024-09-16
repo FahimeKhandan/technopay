@@ -1,5 +1,5 @@
 "use client";
-import { Box, Chip, FormControl, Grid2, MenuItem, Select } from "@mui/material";
+import { Box, Chip, FormControl, MenuItem, Select } from "@mui/material";
 import { useEffect, useState } from "react";
 
 interface Props {
@@ -47,22 +47,27 @@ const Filters = ({ title, options, onFilterChange }: Props) => {
       </FormControl>
 
       <FormControl sx={{ display: { xs: "none", md: "block" } }}>
-        <Grid2
-          container
-          spacing={1}
+        <Box
+          // container
+          // spacing={1}
+          display="flex"
           alignItems="center"
           justifyContent="center"
+          flexWrap="wrap"
+          gap={1}
         >
           {options.map((option, index) => (
             <Chip
               variant="outlined"
-              className={option.amount === selectedFilter ? "selected" : ""}
-              key={index}
+              className={
+                `${option.amount === selectedFilter ? "border-[3px]" : "border"} basis-0 grow max-w-[192px]`
+              }
               label={option.label}
+              key={index}
               onClick={() => handleClick(option.amount)}
             ></Chip>
           ))}
-        </Grid2>
+        </Box>
       </FormControl>
     </Box>
   );
