@@ -13,6 +13,7 @@ const theme = createTheme({
     },
   },
   typography: {
+    fontFamily: "yekan-faNum-regular",
     h4: {
       fontSize: "24px",
       "@media (min-width:900px)": {
@@ -63,7 +64,6 @@ const theme = createTheme({
         root: {
           borderRadius: "16px",
           padding: "14px 40px",
-          fontFamily: "yekan-faNum-regular",
           fontSize: "18px",
           fontWeight: 700,
           lineHeight: "28px",
