@@ -82,7 +82,19 @@ const SupplierRow = ({
   supplierName: string;
   prepayment_amount: number;
 }) => {
-  const tooltipTitle = `حق اشتراک برای عضویت در طرح زمین و دریافت وام ۵۰ میلیون تومانی: ${prepayment_amount}`;
+  const tooltipTitle = (
+    <Box
+      display="flex"
+      flexDirection="column"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <p className="text-middle-text text-center">
+        حق اشتراک برای عضویت در طرح زمین و دریافت وام ۵۰ میلیون تومانی:
+      </p>
+      <p className="text-dark-text font-bold"> {prepayment_amount} تومان</p>
+    </Box>
+  );
 
   return (
     <>

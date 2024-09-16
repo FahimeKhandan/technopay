@@ -17,6 +17,7 @@ const config: Config = {
         "dark-info": "#20526A",
         info: "#1E98BC",
         "middle-text": "#4D637B",
+        "dark-text": "#1F2833",
       },
     },
   },
