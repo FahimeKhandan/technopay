@@ -70,8 +70,15 @@ const OnlineLoanRequest = () => {
         alignItems="center"
       >
         {isLoading && (
-          <Skeleton animation="wave" width={450} height={500} />
+          <div>
+            <Skeleton
+              animation="wave"
+              sx={{ width: { xs: "300px", md: "450px" } }}
+              style={{ paddingTop: "57%" }}
+            ></Skeleton>
+          </div>
         )}
+
         {!isLoading &&
           data?.results.map(({ supplier }) =>
             supplier.packages.map(
