@@ -68,7 +68,7 @@ const theme = createTheme({
           fontWeight: 700,
           lineHeight: "28px",
           boxShadow: "none",
-           color: "var(--foreground)",
+          color: "var(--foreground)",
         },
       },
     },
@@ -76,6 +76,13 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           color: "var(--foreground)",
+        },
+      },
+    },
+    MuiSkeleton: {
+      styleOverrides: {
+        root: {
+          borderRadius: "30px",
         },
       },
     },

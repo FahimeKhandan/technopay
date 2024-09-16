@@ -1,9 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import ApiClient from "../services/apiClient";
 
-const apiClient = new ApiClient<FetchedData>("/api/package-list");
+const apiClient = new ApiClient<FetchedPackages>("/api/package-list");
 
-export interface Package {
+export interface PackageInfo {
   collateral_amount: number;
   credit_amount: number;
   guarantee_type: string;
@@ -18,17 +18,17 @@ export interface Package {
 }
 
 export interface Supplier {
-  supplier: { name: string; packages: Package[] };
+  supplier: { name: string; packages: PackageInfo[] };
 }
 
-interface FetchedData {
+export interface FetchedPackages {
   credit_amounts: number[];
   repayment_periods: number[];
   results: Supplier[];
 }
 
 const usePackages = () => {
-  return useQuery<FetchedData, Error>({
+  return useQuery<FetchedPackages, Error>({
     queryKey: ["package-list"],
     queryFn: apiClient.getAll,
     staleTime: 60 * 60 * 1000,

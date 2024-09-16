@@ -6,7 +6,7 @@ import Image from "next/image";
 import { ReactNode } from "react";
 import LightTooltip from "./LightTooltip";
 import PackageCardActions from "./PackageCardActions";
-import { Package } from "../../hooks/usePackeges";
+import { PackageInfo } from "../../hooks/usePackeges";
 
 interface PackageRowProps {
   hasBorder?: boolean;
@@ -14,7 +14,7 @@ interface PackageRowProps {
 }
 
 interface Props {
-  packageInfo: Package;
+  packageInfo: PackageInfo;
   supplierName: string;
 }
 
