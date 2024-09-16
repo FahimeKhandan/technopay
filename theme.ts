@@ -32,7 +32,7 @@ const theme = createTheme({
                 borderColor: "#4D637B",
                 height: "fit-content",
                 borderRadius: "30px",
-                color: " var(--foreground)",
+                color: "var(--foreground)",
                 fontSize: "18px",
                 fontWeight: "400",
               },
@@ -68,6 +68,14 @@ const theme = createTheme({
           fontWeight: 700,
           lineHeight: "28px",
           boxShadow: "none",
+           color: "var(--foreground)",
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          color: "var(--foreground)",
         },
       },
     },

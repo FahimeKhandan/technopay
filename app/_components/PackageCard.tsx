@@ -92,7 +92,7 @@ const SupplierRow = ({
       <p className="text-middle-text text-center">
         حق اشتراک برای عضویت در طرح زمین و دریافت وام ۵۰ میلیون تومانی:
       </p>
-      <p className="text-dark-text font-bold"> {prepayment_amount} تومان</p>
+      <p className="text-foreground font-bold"> {prepayment_amount} تومان</p>
     </Box>
   );
 

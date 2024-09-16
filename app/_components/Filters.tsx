@@ -1,26 +1,26 @@
 "use client";
-import {
-  Box,
-  Chip,
-  FormControl,
-  Grid2,
-  MenuItem,
-  Select
-} from "@mui/material";
-import { useState } from "react";
+import { Box, Chip, FormControl, Grid2, MenuItem, Select } from "@mui/material";
+import { useEffect, useState } from "react";
 
 interface Props {
   title: string;
-  options: string[];
+  options: { label: string; amount: number }[];
+  onFilterChange: (value: number) => void;
 }
 
-const Filters = ({ title, options }: Props) => {
-  const [selectedFilter, setSelectedFilter] = useState<number>(0);
+const Filters = ({ title, options, onFilterChange }: Props) => {
+  const [selectedFilter, setSelectedFilter] = useState<number>(
+    options[0].amount
+  );
 
-  const handleClick = (index: number) => {
-    console.log(index);
-    setSelectedFilter(index);
+  const handleClick = (value: number) => {
+    setSelectedFilter(value);
+    onFilterChange(value);
   };
+
+  useEffect(() => {
+    onFilterChange(options[0].amount);
+  }, []);
 
   return (
     <Box
@@ -35,14 +35,12 @@ const Filters = ({ title, options }: Props) => {
         <Select
           dir="rtl"
           value={selectedFilter}
-          onChange={({ target }) =>
-            handleClick(parseInt(target.value.toString()))
-          }
+          onChange={({ target }) => handleClick(target.value as number)}
           inputProps={{ "aria-label": "Without label" }}
         >
           {options.map((option, index) => (
-            <MenuItem key={index} value={index}>
-              {option}
+            <MenuItem key={index} value={option.amount}>
+              {option.label}
             </MenuItem>
           ))}
         </Select>
@@ -58,10 +56,10 @@ const Filters = ({ title, options }: Props) => {
           {options.map((option, index) => (
             <Chip
               variant="outlined"
-              className={index === selectedFilter ? "selected" : ""}
+              className={option.amount === selectedFilter ? "selected" : ""}
               key={index}
-              label={option}
-              onClick={() => handleClick(index)}
+              label={option.label}
+              onClick={() => handleClick(option.amount)}
             ></Chip>
           ))}
         </Grid2>

@@ -14,10 +14,9 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        "dark-info": "#20526A",
-        info: "#1E98BC",
-        "middle-text": "#4D637B",
-        "dark-text": "#1F2833",
+        "dark-info": "var(--darkInfo)",
+        info: "var(--info)",
+        "middle-text":"var(middleText)",
       },
     },
   },

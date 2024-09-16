@@ -13,6 +13,9 @@
 :root {
   --background: #FAFAFA;
   --foreground: #1F2833;
+  --darkInfo: #20526A;
+  --info: #1E98BC;
+      --middleText: #4D637B;
 }
 
 body {
